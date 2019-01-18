@@ -17,8 +17,11 @@
 	// Assign the root URL to a PHP constant
 	// Can dynamically find everything in URL up tu "/public"
 	$public_end = strpos($_SERVER['SCRIPT_NAME'], '/public') + 7;
+	// echo '$public_end = ' . $public_end . '<br/>';
 	$doc_root = substr($_SERVER['SCRIPT_NAME'], 0, $public_end);
+	// echo '$doc_root = ' . $doc_root . '<br/>';
 	define("WWW_ROOT", $doc_root);
+	// echo 'WWW_ROOT: ' . WWW_ROOT;
 	require_once('functions.php');
 
 
